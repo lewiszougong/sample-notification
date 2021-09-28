@@ -1,0 +1,74 @@
+{
+  "workflowApiVersion": "1.1",
+  "metaData": {
+    "icon": "images/icon.png",
+    "iconSmall": "images/iconSmall.png",
+    "category": "message"
+  },
+  "type": "REST",
+  "lang": {
+    "en-US": {
+      "name": "Channel Message (Custom Activity)",
+      "description": "Notification for a custom Journey Builder activity",
+      "step1Label": "Target Channels",
+      "step2Label": "Configure Personalization Fields"
+    }
+  },
+  "arguments": {
+    "execute": {
+      "inArguments": [],
+      "outArguments": [],
+      "url": "https://34eoz.mocklab.io/journeybuilder/execute",
+      "verb": "POST",
+      "body": "",
+      "header": "",
+      "format": "json",
+      "useJwt": false,
+      "timeout": 10000,
+      "retryCount": 5,
+      "retryDelay": 100
+    }
+  },
+  "configurationArguments": {
+    "applicationExtensionKey": "4eb52802-4947-447e-8f8b-ed8ca5b615cd",
+    "save": {
+      "url": "https://20e0c093-e81c-4702-a2d1-14c6f8ad51ce.mock.pstmn.io/journeybuilder/save",
+      "verb": "POST",
+      "useJwt": true
+    },
+    "publish": {
+      "url": "https://20e0c093-e81c-4702-a2d1-14c6f8ad51ce.mock.pstmn.io/journeybuilder/publish",
+      "verb": "POST",
+      "useJwt": true
+    },
+    "stop": {
+      "url": "https://20e0c093-e81c-4702-a2d1-14c6f8ad51ce.mock.pstmn.io/journeybuilder/stop",
+      "verb": "POST",
+      "useJwt": true
+    },
+    "validate": {
+      "url": "https://20e0c093-e81c-4702-a2d1-14c6f8ad51ce.mock.pstmn.io/journeybuilder/validate",
+      "verb": "POST",
+      "useJwt": true
+    }
+  },
+  "wizardSteps": [
+    {"key":"variableInitialisation", "label": "Target Channels"},
+    {"key": "fieldSelection", "label": "Configure Personalization Fields"}
+  ],
+  "userInterfaces": {
+    "configModal": {
+      "height": 400,
+      "width": 1000,
+      "fullscreen": false
+    }
+  },
+  "schema": {
+    "arguments": {
+      "execute": {
+        "inArguments": [],
+        "outArguments": []
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet"
+          href="vendor/salesforce-lightning-design-system/styles/salesforce-lightning-design-system.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="//code.jquery.com/git/jquery-git.min.js"></script>
+    <script type="text/javascript" src="js/require.js"></script>
+    <script type="text/javascript">
+        (function () {
+            var config = {
+                baseUrl: 'js'
+            };
+
+            var dependencies = [
+                'customActivity'
+            ];
+
+            require(config, dependencies);
+        })();
+
+    </script>
+
+    <style type="text/css">
+		body {
+			padding: 15px;
+			margin: 0;
+			font-size: 11px;
+			color: #16325c;
+			font-family: "Salesforce Sans", Arial, sans-serif;
+		}
+
+		.step {
+			display: none;
+		}
+
+		.phoneVisible{
+			display: none;
+		}
+
+		#step1 {
+			display: block;
+		}
+
+		input {
+			font-family: inherit;
+			display: block;
+			padding: 4px 5px;
+			font-size: 11px;
+			color: #16325c;
+			background-color: #ffffff;
+			background-image: none;
+			border: 1px solid #d8dde6;
+			border-radius: 0.25rem;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+
+		input[type=text] {
+			width: 95%;
+			margin-bottom: 20px;
+		}
+
+		.inputLabel {
+			font-family: inherit;
+			margin-bottom: 5px;
+			font-size: 8pt;
+			color: #808080;
+			text-transform: uppercase;
+		}
+	</style>
+</head>
+
+<body>
+
+    <div id="step1" class="step">
+        <p class="inputLabel">Target Channel</p>
+        <select id="targetChannels">
+            <option value="SMS">SMS</option>
+            <option value="PUSH">Push</option>
+            <option value="LINE">Line</option>
+        </select>
+    </div>
+    <div id="step2" class="step">
+
+<!--        <div style="width: 60%;height:850px;border:1px groove #555552;margin: auto;padding-left: 50px;padding-top: 10px;">-->
+        <div style="padding-left: 50px;padding-top: 10px;">
+            <p class="inputLabel">Content ID from CMS:</p>
+            <input id="eventCode" placeholder="event code" type="text" required="required" minlength="1"/>
+            <p class="inputLabel">Customer ID:</p>
+            <input id="customerNo" placeholder="customer number" type="text" required="required" minlength="1"/>
+            <div id = "phone1" class = "phoneVisible">
+                <p class="inputLabel">Phone Number</p>
+                <input id="recipientPhoneNumber" placeholder="phone" type="text" required="required" minlength="1"/>
+            </div>
+            <p class="inputLabel">Attribute  1</p>
+            <input id="attribute1" placeholder="first attribute" type="text" required="required" minlength="1"/>
+            <p class="inputLabel">Attribute  2</p>
+            <input id="attribute2" placeholder="second attribute" type="text" required="required" minlength="1"/>
+            <p class="inputLabel">Attribute  3</p>
+            <input id="attribute3" placeholder="third attribute" type="text" required="required" minlength="1"/>
+            <p class="inputLabel">Attribute  4</p>
+            <input id="attribute4" placeholder="subsequent attribute" type="text" required="required" minlength="1"/>
+            <p class="inputLabel">Attribute  5</p>
+            <input id="attribute5" placeholder="subsequent attribute" type="text" required="required" minlength="1"/>
+            <p class="inputLabel">Attribute  6</p>
+            <input id="attribute6" placeholder="subsequent attribute" type="text" required="required" minlength="1"/>
+            <p class="inputLabel">Attribute  7</p>
+            <input id="attribute7" placeholder="subsequent attribute" type="text" required="required" minlength="1"/>
+            <p class="inputLabel">Attribute  8</p>
+            <input id="attribute8" placeholder="subsequent attribute" type="text" required="required" minlength="1"/>
+            <p class="inputLabel">Attribute  9</p>
+            <input id="attribute9" placeholder="subsequent attribute" type="text" required="required" minlength="1"/>
+            <p class="inputLabel">Attribute  10</p>
+            <input id="attribute10" placeholder="subsequent attribute" type="text" required="required" minlength="1"/>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
